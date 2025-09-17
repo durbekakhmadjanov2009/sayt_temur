@@ -1,17 +1,18 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
-.container{
+.container {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg , #153677 , #4e085f);
+    background: linear-gradient(135deg, #153677, #4e085f);
     padding: 10px;
 }
-.todo-app{
+
+.todo-app {
     width: 100%;
     max-width: 540px;
     background: #fff;
@@ -20,18 +21,20 @@
     border-radius: 10px;
 }
 
-.todo-app h2{
+.todo-app h2 {
     color: #002765;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    font-size: 24px;
 }
 
-.todo-app h2 img{
+.todo-app h2 img {
     width: 30px;
-    margin-inside: 10px;
+    margin-left: 10px;
 }
-.row{
+
+.row {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -41,15 +44,16 @@
     margin-bottom: 25px;
 }
 
-input{
+input {
     flex: 1;
     border: none;
     outline: none;
     background: transparent;
     padding: 10px;
+    font-size: 16px;
 }
 
-button{
+button {
     border: none;
     outline: none;
     padding: 16px 50px;
@@ -58,8 +62,14 @@ button{
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
+    transition: 0.3s;
 }
-ul li{
+
+button:hover {
+    background: #e04b3a;
+}
+
+ul li {
     list-style: none;
     font-size: 17px;
     padding: 12px 8px 12px 50px;
@@ -68,7 +78,7 @@ ul li{
     position: relative;
 }
 
-ul li:before{
+ul li:before {
     content: '';
     position: absolute;
     height: 28px;
@@ -80,14 +90,17 @@ ul li:before{
     top: 8px;
     left: 8px;
 }
-ul li.checked{
+
+ul li.checked {
     color: #555;
     text-decoration: line-through;
 }
-li.checked:before{
+
+li.checked:before {
     background-image: url("images/checked.png");
 }
-ul li span{
+
+ul li span {
     position: absolute;
     right: 0;
     top: 5px;
@@ -99,6 +112,69 @@ ul li span{
     text-align: center;
     border-radius: 50%;
 }
-ul li span:hover{
+
+ul li span:hover {
     background: #edeef0;
+}
+
+/* 📱 RESPONSIVE STYLES */
+@media (max-width: 768px) {
+    .todo-app {
+        margin: 50px 10px;
+        padding: 30px 20px 50px;
+    }
+
+    .todo-app h2 {
+        font-size: 20px;
+    }
+
+    .row {
+        flex-direction: column;
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    input {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+        border-radius: 30px;
+    }
+
+    ul li {
+        font-size: 15px;
+        padding: 10px 8px 10px 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .todo-app {
+        margin: 30px 5px;
+        padding: 20px 15px 40px;
+    }
+
+    .todo-app h2 {
+        font-size: 18px;
+    }
+
+    input {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    ul li {
+        font-size: 14px;
+        padding: 8px 5px 8px 40px;
+    }
 }
