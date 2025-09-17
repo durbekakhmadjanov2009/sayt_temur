@@ -9,6 +9,10 @@
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(135deg, #153677, #4e085f);
+
+    display: flex;               /* markazlash uchun */
+    justify-content: center;     /* gorizontal markaz */
+    align-items: center;         /* vertikal markaz */
     padding: 10px;
 }
 
@@ -16,7 +20,6 @@
     width: 100%;
     max-width: 540px;
     background: #fff;
-    margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
 }
